@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Animation</title>
+    <style>
+        .div1{
+            background-image: url("cat1.jpg");
+            height:1500px;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .left{
+            width:45%;
+            padding:20px;
+            margin-left: 20px;
+            box-sizing: border-box;
+            float: left;
+            text-align: justify;
+        }
+        .main1{
+            opacity:0;
+            transition: all 1s;
+            transform: scale(0.1);
+
+        }
+        .active{
+            opacity:1;
+            transition: all 1s;
+            transform: scale(1);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="main1" id="main">
+        <div class="left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit totam dicta temporibus quas reprehenderit, numquam aut quos repellendus magni blanditiis officia facere omnis repellat debitis illum. Quam beatae adipisci unde aperiam odit at autem? Inventore ea aperiam, quos ab assumenda itaque. Nihil reprehenderit ab reiciendis iste mollitia delectus, excepturi repudiandae ea quos quia libero suscipit ut, amet vero. Ipsa nulla perspiciatis dolor corrupti aspernatur omnis quidem repellat quae veniam? Facilis, quos veritatis. Consectetur totam tempore maxime nulla similique ducimus quo blanditiis, at ratione eum numquam neque consequatur, saepe ea veritatis repellendus pariatur expedita placeat quae repellat. Ea perferendis itaque reiciendis?</div>
+        <div class="left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit totam dicta temporibus quas reprehenderit, numquam aut quos repellendus magni blanditiis officia facere omnis repellat debitis illum. Quam beatae adipisci unde aperiam odit at autem? Inventore ea aperiam, quos ab assumenda itaque. Nihil reprehenderit ab reiciendis iste mollitia delectus, excepturi repudiandae ea quos quia libero suscipit ut, amet vero. Ipsa nulla perspiciatis dolor corrupti aspernatur omnis quidem repellat quae veniam? Facilis, quos veritatis. Consectetur totam tempore maxime nulla similique ducimus quo blanditiis, at ratione eum numquam neque consequatur, saepe ea veritatis repellendus pariatur expedita placeat quae repellat. Ea perferendis itaque reiciendis?</div>
+        <div class="left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit totam dicta temporibus quas reprehenderit, numquam aut quos repellendus magni blanditiis officia facere omnis repellat debitis illum. Quam beatae adipisci unde aperiam odit at autem? Inventore ea aperiam, quos ab assumenda itaque. Nihil reprehenderit ab reiciendis iste mollitia delectus, excepturi repudiandae ea quos quia libero suscipit ut, amet vero. Ipsa nulla perspiciatis dolor corrupti aspernatur omnis quidem repellat quae veniam? Facilis, quos veritatis. Consectetur totam tempore maxime nulla similique ducimus quo blanditiis, at ratione eum numquam neque consequatur, saepe ea veritatis repellendus pariatur expedita placeat quae repellat. Ea perferendis itaque reiciendis?</div>
+        <div class="left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit totam dicta temporibus quas reprehenderit, numquam aut quos repellendus magni blanditiis officia facere omnis repellat debitis illum. Quam beatae adipisci unde aperiam odit at autem? Inventore ea aperiam, quos ab assumenda itaque. Nihil reprehenderit ab reiciendis iste mollitia delectus, excepturi repudiandae ea quos quia libero suscipit ut, amet vero. Ipsa nulla perspiciatis dolor corrupti aspernatur omnis quidem repellat quae veniam? Facilis, quos veritatis. Consectetur totam tempore maxime nulla similique ducimus quo blanditiis, at ratione eum numquam neque consequatur, saepe ea veritatis repellendus pariatur expedita placeat quae repellat. Ea perferendis itaque reiciendis?</div>
+  
+    </div>
+    <script>
+      
+        window.addEventListener("scroll",function(){
+            
+
+            var main = document.getElementById("main");
+            var contentPosition = main.getBoundingClientRect().top;
+            var scrolY = window.scrollY;
+            console.log(scrolY);
+            if(contentPosition < scrolY){
+
+                main.classList.add("active");
+
+            
+            }else{
+                main.classList.remove("active");
+
+            }
+
+            
+        })
+
+    </script>
+</body>
+</html>
